@@ -44,6 +44,10 @@ const Box = styled.div`
     ${LinkComponent} {
         cursor: zoom-in;
     }
+    
+    @media screen and (max-width: 800px){
+        flex-direction: column;
+    }
 `
 
 export default App;
