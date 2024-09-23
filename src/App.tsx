@@ -3,6 +3,7 @@ import './App.css';
 import styled from "styled-components";
 import {LinkComponent} from "./components/Link.styled";
 import {SuperButton} from "./components/Button.styled";
+import {MyTheme} from "./styles/Theme.styles";
 
 
 function App() {
@@ -16,8 +17,8 @@ function App() {
                     <SuperButton fontSize={'30px'}>Hello</SuperButton>*/}
 
 
-                    <SuperButton typeBtn={'primary'} active>Hello</SuperButton>
-                    <SuperButton typeBtn={'outlined'}>Hello</SuperButton>
+                    <SuperButton color={MyTheme.colors.primary} typeBtn={'primary'} active>Hello</SuperButton>
+                    <SuperButton color={MyTheme.colors.secondary} typeBtn={'outlined'}>Hello</SuperButton>
                 </Box>
 
             </header>
@@ -41,8 +42,8 @@ const Box = styled.div`
         cursor: zoom-in;
     }
     
-    @media screen and (max-width: 800px){
-        flex-direction: column;
+    @media ${MyTheme.media.tablet}{
+        flex-direction: column
     }
 `
 
